@@ -1,0 +1,85 @@
+.courses_section {
+    padding: 65px 0;
+}
+
+.sec_head h1 {
+    font-weight: 400;
+    font-size: 3.7rem;
+}
+
+.sec_head p {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.head_heighlight {
+    font-weight: 800;
+    color: #0089e5;
+}
+
+.coursetabs {
+    background: aliceblue !important;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.Courses_coursetabs__p11SO svg {
+    margin-right: 8px;
+    font-size: 1.4rem;
+    color: #0089e5;
+}
+
+.course_slider {
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.course_slider_img {
+    width: 100%;
+    height: 210px;
+}
+
+.course_slider_text {
+    padding: 15px;
+}
+
+.course_slider_text small {
+    color: #444;
+}
+
+.course_slider_text h5 {
+    color: #0089e5;
+}
+
+@media (max-width: 768px) {
+    .sec_head h1 {
+        font-size: 1.7rem;
+    }
+    .coursetabs {
+        font-size: .8rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .sec_head h1 {
+        font-size: 1.4rem;
+    }
+    .sec_head p {
+        font-size: 1rem;
+    }
+    .coursetabs {
+        font-size: .8rem;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 320px) {
+    .login_main {
+        right: 60px;
+    }
+    .sec_head h1 {
+        font-size: 1.3rem;
+    }
+}

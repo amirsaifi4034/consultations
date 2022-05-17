@@ -1,0 +1,122 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.nav-pills .nav-link svg {
+    color: #0089e5 !important;
+    font-size: 1.4rem;
+    margin-right: 8px;
+}
+
+.nav-pills .nav-link.active svg,
+.nav-pills .show>.nav-link svg,
+.nav-pills .nav-link:hover svg {
+    color: #fff !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background: #0089e5 !important;
+}
+
+.nav-pills .nav-link:hover {
+    cursor: pointer;
+    background: #0089e5 !important;
+    color: #fff;
+}
+
+.courses_slider .swiper-slide-next {
+    transform: scale(1.1) !important;
+}
+
+.courses_slider .swiper-wrapper {
+    padding: 30px 0;
+}
+
+.banerSection .carousel-indicators {
+    width: 90%;
+    margin: auto !important;
+    z-index: 9 !important;
+    opacity: 0;
+}
+
+.banerSection .carousel-item {
+    height: 100vh;
+    position: relative;
+}
+
+.banerSection .carousel-item img {
+    object-fit: cover;
+    object-position: top;
+    transition: all 7s ease-in;
+}
+
+.banerSection .carousel-item:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.0760679271708683) 100%);
+    z-index: 2;
+}
+
+.banerSection .active.carousel-item img {
+    transform: scale(1.1);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background: #0089e5 !important;
+    color: #fff !important;
+}
+
+.nav-tabs .nav-link {
+    border: 0 !important;
+    margin: 0 !important;
+    margin-right: 5px !important;
+}
+
+.nav-tabs {
+    border-bottom: 2px solid #0089e5 !important;
+}
+
+.testimonials_slider .swiper-pagination {
+    bottom: -5px !important;
+}
+
+span#basic-addon1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #444;
+    border: none;
+    border-right: 2px solid #ddd;
+    background-color: #fff;
+}
+
+@media (max-width: 768px) {
+    .courses_slider .swiper-slide-next {
+        transform: inherit !important;
+    }
+}
+
+@media (max-width: 375px) {
+    span#basic-addon1 {
+        font-size: 21px;
+    }
+}

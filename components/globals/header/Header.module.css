@@ -1,0 +1,54 @@
+    .menu_list {
+        background-color: #1D9BF0;
+        border-radius: 25px;
+    }
+    
+    .menu_list a {
+        color: #fff !important;
+    }
+    
+    .header_sticky {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+    }
+    
+    @media (max-width: 768px) {
+        .menu_list {
+            flex-direction: row;
+        }
+        .menu_list a {
+            padding: 10px 15px !important;
+        }
+        .loginText {
+            display: none;
+        }
+        .login_main {
+            position: absolute;
+            top: -5px;
+            right: 15px;
+            font-size: 23px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .menu_list {
+            flex-direction: column;
+        }
+        .loginText {
+            display: inline-block;
+            font-size: 12px;
+        }
+        .login_main {
+            top: -70px;
+            right: 70px;
+            font-size: 23px;
+        }
+    }
+    
+    @media (max-width: 320px) {
+        .login_main {
+            right: 60px;
+        }
+    }

@@ -1,0 +1,35 @@
+.Blog_videosec {
+    padding: 65px 0;
+}
+
+.blogvideo {
+    width: 90%;
+    margin: 35px auto 0px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card_footer p {
+    font-size: 11px;
+    font-weight: 500;
+    color: #0089e5;
+}
+
+.card_footer p a {
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.videosCard .blogvideo {
+    position: relative;
+}
+
+.blogvideo_media {
+    position: relative;
+}

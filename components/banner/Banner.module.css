@@ -1,0 +1,197 @@
+.bannerContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.bannerContainer a {
+    display: none !important;
+}
+
+.bannerContainer .bannerTextCont {
+    bottom: 7rem;
+    left: 5%;
+    text-align: left;
+    padding: 2rem 0 0 0;
+    width: 65%;
+    z-index: 9;
+}
+
+.banerBtnCont {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.enrolBtn {
+    padding: 0.6rem 2rem;
+    margin-right: 2rem;
+    color: #1D9BF0;
+    border-radius: 15px;
+    background: #fff;
+    border: 0;
+    font-weight: 600;
+}
+
+.enrolBtn:hover {
+    background-color: #1D9BF0;
+}
+
+.bannerTextCont h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    width: 75%;
+    color: #FFF;
+}
+
+.bannerTextCont h4 {
+    margin: 1.5rem 0;
+}
+
+.bannerTextCont p {
+    width: 50%;
+}
+
+.progressBarContainer {
+    position: absolute;
+    bottom: 1rem;
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.progressBarContainer div {
+    display: block;
+    width: 20%;
+    padding: 0 10px;
+    color: white;
+}
+
+.progressBarContainer div .progressBar {
+    width: 100%;
+    height: 3px;
+    background-color: rgba(244, 244, 244, 0.7);
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+.progressBarContainer div .progressBar .inProgress {
+    background-color: #1970fa;
+    width: 0%;
+    height: 0px;
+    padding: 0;
+}
+
+.progressBarContainer .progAnimation {
+    width: 100%;
+    height: 3px;
+    background: #1D9BF0;
+    position: absolute;
+    border-radius: 10px;
+    left: 0;
+    animation: mymove 8s;
+    transition: ease-in-out 0.5s;
+}
+
+@keyframes mymove {
+    from {
+        width: 0px;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.progressBarContainer p {
+    margin-top: 12px;
+    margin-bottom: 1rem;
+    letter-spacing: .4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.bannerContainer button[data-bs-target] {
+    width: 20%;
+    height: 6rem;
+    position: relative;
+    border: 0 !important;
+}
+
+@media(max-width:1300px) {
+    .bannerTextCont h1 {
+        font-size: 2.5rem;
+        width: 80%;
+        line-height: 50px;
+    }
+}
+
+@media(max-width:1150px) {
+    .bannerTextCont h1 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+    .progressBarContainer {
+        bottom: 20px;
+        line-height: normal;
+    }
+    .bannerTextCont h4 {
+        margin: 0.8rem 0;
+    }
+    .bannerContainer .bannerTextCont {
+        bottom: 8rem;
+        padding: 1rem 0;
+        width: 70%;
+    }
+    .enrolBtn {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:992px) {
+    .bannerTextCont h1 {
+        font-size: 1.7rem;
+        line-height: inherit;
+    }
+    .bannerTextCont h4 {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+    }
+    .bannerContainer .bannerTextCont {
+        bottom: 7rem;
+        padding: 1rem 0;
+        width: 100%;
+    }
+    .progressBarContainer p {
+        font-size: 12px;
+    }
+    .progressBarContainer {
+        width: 100%;
+    }
+    .bannerContainer button[data-bs-target] {
+        height: 3px;
+        border-radius: 0px !important;
+    }
+}
+
+@media(max-width:600px) {
+    .bannerTextCont h5 {
+        font-size: 1rem;
+        line-height: normal;
+    }
+    .bannerContainer .bannerTextCont {
+        bottom: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .progressBarContainer {
+        display: none;
+    }
+}

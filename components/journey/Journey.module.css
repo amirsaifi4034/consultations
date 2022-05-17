@@ -1,0 +1,91 @@
+.journey_section {
+    padding: 65px 0;
+}
+
+.sec_head h1 {
+    font-weight: 400;
+    font-size: 3.7rem;
+}
+
+.sec_head p {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+.head_heighlight {
+    font-weight: 800;
+    color: #0089e5;
+}
+
+.journey_cards p {
+    font-size: 21px;
+    color: #555;
+}
+
+.journey_card_img {
+    height: 320px;
+}
+
+.journey_progress {
+    border: 2px solid #0089e5;
+    width: 0;
+    height: 90.5%;
+    position: absolute;
+    padding: 0;
+    left: 50%;
+    top: 165px;
+    transform: translateX(-50%);
+}
+
+.active_journey {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+@media (max-width: 1024px) {
+    .journey_card_img {
+        height: 260px;
+    }
+    .journey_progress {
+        top: 130px;
+    }
+}
+
+@media (max-width: 768px) {
+    .journey_card_img {
+        height: 200px;
+    }
+    .journey_cards p {
+        font-size: 14px;
+    }
+    .sec_head h1 {
+        font-size: 1.7rem;
+    }
+    .sec_head p {
+        font-size: 1.2rem;
+    }
+    .journey_progress {
+        top: 85px;
+        height: 92.5%;
+    }
+}
+
+@media (max-width: 425px) {
+    .journey_cards,
+    .active_journey {
+        text-align: center;
+    }
+    .journey_cards {
+        margin-bottom: 35px;
+    }
+    .journey_card_img {
+        width: 45%;
+        margin: auto;
+    }
+    .sec_head p {
+        font-size: 1rem;
+    }
+    .sec_head h1 {
+        font-size: 1.4rem;
+    }
+}
