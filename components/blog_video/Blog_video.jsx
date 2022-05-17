@@ -11,7 +11,7 @@ export const Blog_video = () => {
     const BlogCard = [
         {
             id: 0,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/mcom.jpeg',
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
             blogheart: <FaHeart />,
@@ -19,7 +19,7 @@ export const Blog_video = () => {
         },
         {
             id: 1,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/mtech.jpeg',
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
             blogheart: <FaHeart />,
@@ -27,7 +27,7 @@ export const Blog_video = () => {
         },
         {
             id: 2,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/emba.jpg',
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
             blogheart: <FaHeart />,
@@ -35,7 +35,7 @@ export const Blog_video = () => {
         },
         {
             id: 3,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/mcom.jpeg',
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
             blogheart: <FaHeart />,
@@ -45,7 +45,7 @@ export const Blog_video = () => {
     const VideoCard = [
         {
             id: 0,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/mcom.jpeg',
             playbutton: <Play_button />,
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
@@ -54,7 +54,7 @@ export const Blog_video = () => {
         },
         {
             id: 0,
-            blogimg: '/images/education.jpg',
+            blogimg: '/images/mcom.jpeg',
             playbutton: <Play_button />,
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
             bloglikeview: '7033 View | 1.3M Likes | 2330 Shares',
