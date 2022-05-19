@@ -65,8 +65,11 @@ export const Why_chooseus = () => {
                             <Choose_items key={chooseUs.id} chooseusItem={chooseUs} />
                         )}
                     </Col>
-                    <Col sm={6}>
-                        <div className={`${styles.choose_center_img} position-relative`}>
+                    <Col sm={6} className="position-relative">
+                        <div className={`${styles.quesition_img} position-absolute`}>
+                            <Image src="/images/choose2.png" layout="fill" alt="Why choose"></Image>
+                        </div>
+                        <div className={`${styles.choose_center_img} position-absolute`}>
                             <Image src="/images/choose1.png" layout="fill" alt="Why choose"></Image>
                         </div>
                     </Col>

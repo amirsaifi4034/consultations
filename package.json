@@ -15,6 +15,7 @@
     "react-bootstrap": "^2.3.1",
     "react-dom": "18.1.0",
     "react-icons": "^4.3.1",
+    "react-progressbar-on-scroll": "^1.1.1",
     "swiper": "^8.1.4"
   },
   "devDependencies": {

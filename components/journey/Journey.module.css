@@ -27,14 +27,19 @@
 }
 
 .journey_progress {
-    border: 2px solid #0089e5;
-    width: 0;
+    background: #ddd;
+    width: 5px;
     height: 90.5%;
     position: absolute;
     padding: 0;
     left: 50%;
     top: 165px;
     transform: translateX(-50%);
+}
+
+.active_progress {
+    background: #0089e5;
+    transition: height ease-in-out;
 }
 
 .active_journey {

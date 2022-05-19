@@ -1,10 +1,28 @@
 
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './Journey.module.css';
 import Journey_cards from './Journey_cards';
 
+
 export const Journey = () => {
+
+    const [scrollTop, setscrollTop] = useState(0);
+
+    const OnScroll = () => {
+        
+        const progress_scroll = document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (progress_scroll / height) * 100;
+
+        setscrollTop(scrolled);
+    }
+    
+    useEffect(() => {
+            window.addEventListener("scroll", OnScroll);
+            return () => window.removeEventListener("scroll", OnScroll);
+    }, [])
+
     const journey_cards_1 = {
         steps_count: "Step 1",
         steps_info: "Select a course and education mode",
@@ -33,7 +51,7 @@ export const Journey = () => {
     };
   return (
     <>
-        <section className={styles.journey_section}>
+        <section className={`${styles.journey_section} scroll_progress`}>
             <Container>
                 <Row className="position-relative">
                     <Col sm={10} className="offset-sm-1 px-0 px-sm-4 ">
@@ -43,7 +61,9 @@ export const Journey = () => {
                        </div>
                     </Col>
 
-                    <div className={`${styles.journey_progress} d-none d-sm-block`}></div>
+                    <div className={`${styles.journey_progress} d-none d-sm-block`}>
+                        <div className={styles.active_progress} style={{height: `${scrollTop}%`}}></div>
+                    </div>
                     <Col sm={6}></Col>
                     <Col sm={6}>
                         <Journey_cards journey_cards={journey_cards_1} />

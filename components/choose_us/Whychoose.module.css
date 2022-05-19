@@ -13,9 +13,19 @@
 }
 
 .choose_center_img {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 350px;
     bottom: 0;
+    right: 0;
+}
+
+.quesition_img {
+    bottom: 0;
+    width: 60%;
+    height: 495px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .choose_center_img img {
@@ -49,6 +59,13 @@
     .sec_head p {
         font-size: 1.2rem;
     }
+    .choose_center_img {
+        height: 320px;
+    }
+    .quesition_img {
+        width: 80%;
+        height: 445px;
+    }
 }
 
 @media (max-width: 425px) {
@@ -71,5 +88,9 @@
     }
     .chooseItems p b {
         font-size: 1.3rem;
+    }
+    .choose_center_img,
+    .quesition_img {
+        display: none;
     }
 }

@@ -53,7 +53,7 @@ export const Blog_video = () => {
             blogshare: <AiOutlineShareAlt /> 
         },
         {
-            id: 0,
+            id: 1,
             blogimg: '/images/mcom.jpeg',
             playbutton: <Play_button />,
             blogtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit',
