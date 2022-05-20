@@ -7,7 +7,7 @@ export const Journey_cards = (props) => {
   return (
     <>
         <div className={styles.journey_cards}>
-            <Row className={`${props.journey_add_class ? styles.active_journey : ''} align-items-center`}>
+            <Row className={`${props.journey_add_class ? styles.active_journey : ''} ${styles.cards_main_journey} position-relative align-items-center`}>
                 <Col sm={6}>
                     <h4 className="fw-bold">{props.journey_cards.steps_count}</h4>
                     <p>{props.journey_cards.steps_info}</p>

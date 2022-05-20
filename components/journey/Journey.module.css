@@ -37,6 +37,34 @@
     transform: translateX(-50%);
 }
 
+.cards_main_journey {
+    padding-left: 15px;
+}
+
+.cards_main_journey.active_journey {
+    padding-left: 0 !important;
+    padding-right: 15px;
+}
+
+.cards_main_journey:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    background: #0089e5;
+    border-radius: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 3px 9px #333;
+}
+
+.active_journey:before {
+    left: auto;
+    right: -10px;
+}
+
 .active_progress {
     background: #0089e5;
     transition: height ease-in-out;

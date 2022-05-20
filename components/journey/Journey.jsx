@@ -1,5 +1,5 @@
 
-import {React, useEffect, useState} from 'react';
+import { React, useEffect, useState, useRef } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import styles from './Journey.module.css';
 import Journey_cards from './Journey_cards';
@@ -8,20 +8,18 @@ import Journey_cards from './Journey_cards';
 export const Journey = () => {
 
     const [scrollTop, setscrollTop] = useState(0);
+    const scrollSectionRef = useRef(null);
 
     const OnScroll = () => {
-        
-        const progress_scroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrolled = (progress_scroll / height) * 100;
+        if(scrollSectionRef.current.getBoundingClientRect().top < 0) {
+            var distanceFromTop = scrollSectionRef.current.getBoundingClientRect().top;
+            setscrollTop(Math.abs(distanceFromTop)/10 > 100 ? 100 : Math.abs(distanceFromTop)/10)
+        }
+    };
 
-        setscrollTop(scrolled);
-    }
-    
     useEffect(() => {
-            window.addEventListener("scroll", OnScroll);
-            return () => window.removeEventListener("scroll", OnScroll);
-    }, [])
+        window.addEventListener("scroll", OnScroll);
+    }, []);
 
     const journey_cards_1 = {
         steps_count: "Step 1",
@@ -49,47 +47,47 @@ export const Journey = () => {
         steps_info: "Still have doubts? Don't worry! You also get 3 follow-up calls free of cost",
         steps_img: "/images/step5.png"
     };
-  return (
-    <>
-        <section className={`${styles.journey_section} scroll_progress`}>
-            <Container>
-                <Row className="position-relative">
-                    <Col sm={10} className="offset-sm-1 px-0 px-sm-4 ">
-                       <div className={`${styles.sec_head} mb-5 text-center`}>
-                           <h1>Lorem ipsum <span className={styles.head_heighlight}> dolor </span></h1>
-                           <p>Lorem ipsum dolor sit amet. consectetur adipiscing elit.</p>
-                       </div>
-                    </Col>
+    return (
+        <>
+            <section className={`${styles.journey_section} scroll_progress`}>
+                <Container>
+                    <Row className="position-relative">
+                        <Col sm={10} className="offset-sm-1 px-0 px-sm-4 ">
+                            <div className={`${styles.sec_head} mb-5 text-center`}>
+                                <h1>Lorem ipsum <span className={styles.head_heighlight}> dolor </span></h1>
+                                <p>Lorem ipsum dolor sit amet. consectetur adipiscing elit.</p>
+                            </div>
+                        </Col>
 
-                    <div className={`${styles.journey_progress} d-none d-sm-block`}>
-                        <div className={styles.active_progress} style={{height: `${scrollTop}%`}}></div>
-                    </div>
-                    <Col sm={6}></Col>
-                    <Col sm={6}>
-                        <Journey_cards journey_cards={journey_cards_1} />
-                    </Col>
-                    <Col sm={6}>
-                        <Journey_cards journey_add_class={true} journey_cards={journey_cards_2} />
-                    </Col>
-                    <Col sm={6}></Col>
-                    <Col sm={6}></Col>
-                    <Col sm={6}>
-                        <Journey_cards journey_cards={journey_cards_3} />
-                    </Col>
-                    <Col sm={6}>
-                        <Journey_cards journey_add_class={true} journey_cards={journey_cards_4} />
-                    </Col>
-                    <Col sm={6}></Col>
-                    <Col sm={6}></Col>
-                    <Col sm={6}>
-                        <Journey_cards journey_cards={journey_cards_5} />
-                    </Col>
+                        <div className={`${styles.journey_progress} d-none d-sm-block`}>
+                            <div ref={scrollSectionRef} className={styles.active_progress} style={{ height: `${scrollTop}%` }}></div>
+                        </div>
+                        <Col sm={6}></Col>
+                        <Col sm={6}>
+                            <Journey_cards journey_cards={journey_cards_1} />
+                        </Col>
+                        <Col sm={6}>
+                            <Journey_cards journey_add_class={true} journey_cards={journey_cards_2} />
+                        </Col>
+                        <Col sm={6}></Col>
+                        <Col sm={6}></Col>
+                        <Col sm={6}>
+                            <Journey_cards journey_cards={journey_cards_3} />
+                        </Col>
+                        <Col sm={6}>
+                            <Journey_cards journey_add_class={true} journey_cards={journey_cards_4} />
+                        </Col>
+                        <Col sm={6}></Col>
+                        <Col sm={6}></Col>
+                        <Col sm={6}>
+                            <Journey_cards journey_cards={journey_cards_5} />
+                        </Col>
 
-                </Row>
-            </Container>
-        </section>
-    </>
-  )
+                    </Row>
+                </Container>
+            </section>
+        </>
+    )
 }
 
 export default Journey;
