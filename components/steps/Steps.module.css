@@ -1,0 +1,31 @@
+.Steps_sec {
+    padding: 65px 0;
+}
+
+.sec_head h1 {
+    font-weight: 400;
+    font-size: 3.7rem;
+}
+
+.sec_head p {
+    font-size: 1.4rem;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .sec_head h1 {
+        font-size: 1.7rem;
+    }
+    .sec_head p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .sec_head p {
+        font-size: 1rem;
+    }
+    .sec_head h1 {
+        font-size: 1.4rem;
+    }
+}

@@ -6,8 +6,8 @@ import Courses from '../components/courses/Courses';
 import Cv_apps from '../components/cv_apps/Cv_apps';
 import Footer from '../components/globals/footer/Footer';
 import { Header } from '../components/globals/header/Header';
-import Journey from '../components/journey/Journey';
 import Testimonials from '../components/testimonials/Testimonials';
+import Steps from '../components/steps/Steps';
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       <Banner />
       <Courses />
       <Why_chooseus />
-      <Journey />
+      <Steps />
       <Blog_video />
       <Testimonials />
       <Cv_apps />

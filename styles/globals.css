@@ -109,6 +109,100 @@ span#basic-addon1 {
     background-color: #fff;
 }
 
+.swiper_steps {
+    flex-direction: row-reverse;
+}
+
+.swiper_steps .mySwiper2 {
+    width: 55%;
+}
+
+.swiper_steps .mySwiper2 .swiper-slide {
+    background-color: aliceblue;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.swiper_steps .mySwiper {
+    width: 45%;
+}
+
+.swiper_steps .swiper-free-mode>.swiper-wrapper {
+    flex-direction: column;
+    transform: translate(0px) !important;
+}
+
+.swiper_steps .mySwiper .swiper-slide {
+    width: 80% !important;
+    height: max-content;
+    margin-bottom: 30px;
+    padding-left: 45px;
+    position: relative;
+    filter: blur(.8px);
+    cursor: pointer;
+}
+
+.swiper_steps .mySwiper .swiper-slide p {
+    font-size: 14px;
+    margin-bottom: 0 !important;
+}
+
+.swiper_steps .mySwiper .swiper-slide:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 27px;
+    border: 1px dashed #ddd;
+    left: 15px;
+}
+
+.swiper_steps .mySwiper .swiper-slide:before {
+    content: '1';
+    position: absolute;
+    left: 0px;
+    background: #ddd;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.swiper_steps .mySwiper .swiper-slide:nth-child(2)::before {
+    content: '2';
+}
+
+.swiper_steps .mySwiper .swiper-slide:nth-child(3)::before {
+    content: '3';
+}
+
+.swiper_steps .mySwiper .swiper-slide:nth-child(4)::before {
+    content: '4';
+}
+
+.swiper_steps .mySwiper .swiper-slide:nth-child(5)::before {
+    content: '5';
+}
+
+.swiper_steps .swiper-slide-thumb-active {
+    filter: blur(0) !important;
+}
+
+.swiper_steps .swiper-slide-thumb-active h5 {
+    color: #0089e5;
+}
+
+.swiper_steps .swiper-slide-thumb-active:before {
+    background-color: #0089e5 !important;
+    z-index: 10;
+    color: #fff;
+}
+
 @media (max-width: 768px) {
     .courses_slider .swiper-slide-next {
         transform: inherit !important;
