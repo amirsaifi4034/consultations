@@ -5,7 +5,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Autoplay, FreeMode, Navigation, Thumbs } from "swiper";
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "./Steps.module.css";
 import Steps_video from "./Steps_video";
@@ -85,8 +85,9 @@ export const Steps = () => {
                                 slidesPerView={1}
                                 loop={false}
                                 navigation={false}
+                                autoplay={{delay: 5000}}
                                 thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
-                                modules={[FreeMode, Navigation, Thumbs]}
+                                modules={[ Autoplay, FreeMode, Navigation, Thumbs]}
                                 className="mySwiper2"
                             >
                                 {videoCards.map(StepsVideoCard => 
@@ -101,9 +102,10 @@ export const Steps = () => {
                                 loop={false}
                                 spaceBetween={10}
                                 slidesPerView={4}
+                                autoplay={{delay: 5000}}
                                 freeMode={true}
                                 watchSlidesProgress={true}
-                                modules={[FreeMode, Navigation, Thumbs]}
+                                modules={[Autoplay, FreeMode, Navigation, Thumbs]}
                                 className="mySwiper"
                             >
                             {statusCards.map(stepsCountmap => 
