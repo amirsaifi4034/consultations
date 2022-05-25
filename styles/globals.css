@@ -207,6 +207,42 @@ span#basic-addon1 {
     .courses_slider .swiper-slide-next {
         transform: inherit !important;
     }
+    .swiper_steps .mySwiper .swiper-slide:before {
+        height: 20px;
+        width: 20px;
+        font-size: 12px;
+        line-height: 20px;
+        top: 0;
+    }
+    .swiper_steps {
+        flex-direction: column-reverse;
+    }
+    .swiper_steps .mySwiper {
+        width: 100%;
+    }
+    .swiper_steps .swiper-free-mode>.swiper-wrapper {
+        flex-direction: row;
+    }
+    .swiper_steps .mySwiper .swiper-slide {
+        width: 19% !important;
+        padding-left: 0;
+        padding-top: 30px;
+    }
+    .swiper_steps .mySwiper .swiper-slide:after {
+        height: 0;
+        top: 10px;
+        width: 100%;
+        z-index: -1;
+    }
+    .swiper_steps .mySwiper .swiper-slide h5 {
+        font-size: 15px;
+    }
+    .swiper_steps .mySwiper .swiper-slide p {
+        font-size: 12px;
+    }
+    .swiper_steps .mySwiper2 {
+        width: 100%;
+    }
 }
 
 @media (max-width: 375px) {
